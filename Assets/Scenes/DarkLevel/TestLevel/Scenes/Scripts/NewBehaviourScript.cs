@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    int walkspeed =1;
+    int walkSpeed = 1;
     private void Update()
     {
-
-
-        transform.Translate(Vector3.forward * Time.deltaTime * walkspeed); }
-    public void OnTriggerEnter(Collider other)
+        transform.Translate(Vector3.forward * Time.deltaTime * walkSpeed);
+    }
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("attack")){
+        if (other.tag == "Player")
+        {
             GetComponent<Animator>().SetBool("zombieattack", true);
             GetComponent<Animator>().SetBool("zombiewalk", false);
-
+            walkSpeed = 0;
         }
-
     }
-
 }
 
 
