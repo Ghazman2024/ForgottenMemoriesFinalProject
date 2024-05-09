@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     int moveSpeed = 10;
-    int jumpForce = 5;
+    int jumpForce = 10;
     public void Update()
     {
         if (Input.GetKey(KeyCode.D))

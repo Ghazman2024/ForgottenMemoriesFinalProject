@@ -15,7 +15,6 @@ public class NewBehaviourScript : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("zombieattack", true);
             GetComponent<Animator>().SetBool("zombiewalk", false);
-            walkSpeed = 0;
         }
     }
 }
