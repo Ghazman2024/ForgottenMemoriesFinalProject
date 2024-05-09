@@ -6,32 +6,29 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     int moveSpeed = 10;
-    int jumpForce = 10;
+    int jumpForce = 5;
     public void Update()
     {
         if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Animator>().SetBool("Run", true);
+            GetComponent<Animator>().SetBool("RunForward", true);
             GetComponent<Animator>().SetBool("Idle", false);
+            moveSpeed = 10;
             transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
 
         }
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Animator>().SetBool("Run", true);
+            GetComponent<Animator>().SetBool("RunForward", true);
             GetComponent<Animator>().SetBool("Idle", false);
+            moveSpeed = 5;
             transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
 
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             GetComponent<Animator>().SetTrigger("Jump");
-            GetComponent<Rigidbody>().AddForce(Vector2.up * jumpForce);
-        }
-        if (!Input.anyKey)
-        {
-            GetComponent<Animator>().SetBool("Run", false);
-            GetComponent<Animator>().SetBool("Idle", true);
+            transform.Translate(Vector2.up * jumpForce);
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -41,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("Guard", true);
             GetComponent<Animator>().SetBool("Idle", false);
+        }
+        if (!Input.anyKey)
+        {
+            GetComponent<Animator>().SetBool("RunForward", false);
+            GetComponent<Animator>().SetBool("Idle", true);
         }
     }
 }
