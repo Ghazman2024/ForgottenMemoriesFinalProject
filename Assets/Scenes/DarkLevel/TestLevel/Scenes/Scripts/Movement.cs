@@ -5,7 +5,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     float runspeed = 4.5f;
-    int jumpforce = 5;
     float idletime = 7f;
     float timer = 0;
     private void Update()

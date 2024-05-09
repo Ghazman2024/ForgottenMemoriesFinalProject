@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    int moveSpeed = 5;
+    int moveSpeed = 10;
     int jumpForce = 5;
-    GameObject playerDied;
     public void Update()
     {
         if (Input.GetKey(KeyCode.D))
@@ -34,7 +33,14 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<Animator>().SetBool("Run", false);
             GetComponent<Animator>().SetBool("Idle", true);
         }
-
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            GetComponent<Animator>().SetTrigger("Punch");
+        }
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            GetComponent<Animator>().SetBool("Guard", true);
+            GetComponent<Animator>().SetBool("Idle", false);
+        }
     }
 }
-
