@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class ZombieContact : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int walkSpeed = 1;
+    private void Update()
     {
-        
+        transform.Translate(Vector3.forward * Time.deltaTime * walkSpeed);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player")
+        {
+            GetComponent<Animator>().SetBool("zombieattack", true);
+            GetComponent<Animator>().SetBool("zombiewalk", false);
+        }
     }
 }
