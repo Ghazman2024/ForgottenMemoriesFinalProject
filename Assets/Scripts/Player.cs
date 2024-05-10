@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public int jumpForce = 5;
     private bool isJumping = false;
     private Rigidbody rb;
-    public GameObject blockHitbox;
+    public GameObject blockHitbox, attackHitBox;
 
     void Start()
     {
@@ -39,7 +39,9 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0)) // Hitting
         {
+            StartCoroutine(ActivateHitBoxAfterDelay());
             GetComponent<Animator>().SetTrigger("Punch");
+            StartCoroutine(DeactivateHitBoxAfterDelay());
         }
         if (Input.GetKey(KeyCode.Mouse1)) // Blocking
         {
@@ -72,5 +74,17 @@ public class Player : MonoBehaviour
         {
             isJumping = false;
         }
+    }
+
+    private IEnumerator ActivateHitBoxAfterDelay()
+    {
+        yield return new WaitForSeconds(1);
+        attackHitBox.SetActive(true);
+    }
+
+    private IEnumerator DeactivateHitBoxAfterDelay()
+    {
+        yield return new WaitForSeconds(2);
+        attackHitBox.SetActive(false);
     }
 }

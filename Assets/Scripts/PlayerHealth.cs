@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "EnemyAttackBox")
         {
             healthNumber -= 1;
         }
