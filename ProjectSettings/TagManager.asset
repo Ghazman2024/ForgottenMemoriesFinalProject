@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Ground
   - EnemyAttackBox
+  - 5Amo
+  - 10Amo
+  - 15Amo
   layers:
   - Default
   - TransparentFX

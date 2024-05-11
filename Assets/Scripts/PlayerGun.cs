@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,33 +6,84 @@ using UnityEngine;
 
 public class PlayerGun : MonoBehaviour
 {
-    public int amoRemaning = 20;
-    public GameObject amoTxt, amoCreats5, amoCreats10, amoCreats15;
+    public int ammoRemaining = 20;
+    public GameObject ammoTxt, pressEtxt, noAmoTxt;
+
+    private const int AMMO_INCREMENT_5 = 5;
+    private const int AMMO_INCREMENT_10 = 10;
+    private const int AMMO_INCREMENT_15 = 15;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)) // Shooting
         {
-            amoRemaning--;
+            ammoRemaining = Math.Max(0, ammoRemaining - 1);
+            UpdateAmmoText();
         }
-        amoTxt.GetComponent<TMP_Text>().text = amoRemaning.ToString();
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (IsAmmoPickup(other))
         {
-            if (other.gameObject == amoCreats5)
-            {
-                amoRemaning += 5;
-            }
-            else if (other.gameObject == amoCreats10)
-            {
-                amoRemaning += 10;
-            }
-            else if (other.gameObject == amoCreats15)
-            {
-                amoRemaning += 15;
-            }
+            pressEtxt.SetActive(true);
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKeyDown(KeyCode.E) && IsAmmoPickup(other))
+        {
+            PickUpAmmo(other);
+        }
+    }
+
+    private void PickUpAmmo(Collider other)
+    {
+        int ammoAmount = GetAmmoAmountFromTag(other.tag);
+        ammoRemaining += ammoAmount;
+        Destroy(other.gameObject);
+        pressEtxt.SetActive(false);
+        UpdateAmmoText();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        pressEtxt.SetActive(false);
+    }
+
+    private bool IsAmmoPickup(Collider other)
+    {
+        return other.tag == "5Amo" || other.tag == "10Amo" || other.tag == "15Amo";
+    }
+
+    private int GetAmmoAmountFromTag(string tag)
+    {
+        switch (tag)
+        {
+            case "5Amo":
+                return AMMO_INCREMENT_5;
+            case "10Amo":
+                return AMMO_INCREMENT_10;
+            case "15Amo":
+                return AMMO_INCREMENT_15;
+            default:
+                return 0;
+        }
+    }
+
+    private void UpdateAmmoText()
+    {
+        ammoTxt.GetComponent<TMP_Text>().text = ammoRemaining.ToString();
+        if (ammoRemaining <= 0)
+        {
+            noAmoTxt.SetActive(true);
+            StartCoroutine(NoAmoWarning());
+        }
+    }
+    private IEnumerator NoAmoWarning()
+    {
+        yield return new WaitForSeconds(3);
+        noAmoTxt.SetActive(false);
     }
 }
