@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerGun : MonoBehaviour
 {
     public int ammoRemaining = 20;
-    public GameObject ammoTxt, pressEtxt, noAmoTxt;
+    public GameObject ammoTxt, pressEtxt, noAmoTxt, bullet;
 
     private const int AMMO_INCREMENT_5 = 5;
     private const int AMMO_INCREMENT_10 = 10;
@@ -19,6 +19,7 @@ public class PlayerGun : MonoBehaviour
         {
             ammoRemaining = Math.Max(0, ammoRemaining - 1);
             UpdateAmmoText();
+            bullet.SetActive(true);
         }
     }
 

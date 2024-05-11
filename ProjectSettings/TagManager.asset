@@ -10,6 +10,7 @@ TagManager:
   - 5Amo
   - 10Amo
   - 15Amo
+  - Bullet
   layers:
   - Default
   - TransparentFX
