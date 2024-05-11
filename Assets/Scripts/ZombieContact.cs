@@ -22,6 +22,7 @@ public class ZombieContact : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            walkSpeed = 0;
             StartCoroutine(ActivateHitBoxAfterDelay());
             animator.SetBool("zombieattack", true);
             animator.SetBool("zombiewalk", false);
@@ -38,6 +39,7 @@ public class ZombieContact : MonoBehaviour
     private IEnumerator DeactivateHitBoxAfterDelay()
     {
         yield return new WaitForSeconds(3);
+        walkSpeed = 1;
         attackHitBox.SetActive(false);
     }
 }
