@@ -13,6 +13,7 @@ public class ZombieContact : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezePositionZ;
         rb.freezeRotation = true;
     }
 
