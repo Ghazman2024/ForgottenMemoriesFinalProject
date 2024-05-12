@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int moveSpeed = 10;
-    public int jumpForce = 5;
+    private int moveSpeed = 10;
+    private int jumpForce = 8;
     private bool isJumping = false;
     private Rigidbody rb;
+    private BoxCollider boxCollider;
     public GameObject blockHitbox, attackHitBox;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     void Update()
@@ -54,6 +57,19 @@ public class Player : MonoBehaviour
             GetComponent<Animator>().SetBool("Guard", false);
             GetComponent<Animator>().SetBool("Idle", true);
             blockHitbox.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.LeftShift)) // Crouch
+        {
+            GetComponent<Animator>().SetBool("Crouch", true);
+            GetComponent<Animator>().SetBool("Idle", false);
+            moveSpeed = 5;
+            boxCollider.center = new Vector3(boxCollider.center.x, -0.5f, boxCollider.center.z);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            GetComponent<Animator>().SetBool("Crouch", false);
+            GetComponent<Animator>().SetBool("Idle", true);
+            boxCollider.center = new Vector3(boxCollider.center.x, 1.37f, boxCollider.center.z);
         }
         if (!Input.anyKey) // Doing Nothing
         {

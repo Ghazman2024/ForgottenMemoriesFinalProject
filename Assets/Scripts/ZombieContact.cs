@@ -7,10 +7,13 @@ public class ZombieContact : MonoBehaviour
     int walkSpeed = 1;
     public GameObject attackHitBox;
     private Animator animator;
+    private Rigidbody rb;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
     }
 
     private void Update()
