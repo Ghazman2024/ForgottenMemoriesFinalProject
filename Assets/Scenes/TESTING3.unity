@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dbf8df70102c047b203c7d377db5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoRemaining: 20
+  ammoRemaining: 10
   ammoTxt: {fileID: 1959532987}
   pressEtxt: {fileID: 424232523}
   noAmmoTxt: {fileID: 322475077}
@@ -4108,7 +4108,7 @@ GameObject:
   - component: {fileID: 758246034}
   - component: {fileID: 758246033}
   m_Layer: 5
-  m_Name: AmoTxt (1)
+  m_Name: INFO Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5635,7 +5635,7 @@ GameObject:
   - component: {fileID: 1249511109}
   - component: {fileID: 1249511108}
   m_Layer: 5
-  m_Name: AmoTxt (2)
+  m_Name: INFO Healh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
