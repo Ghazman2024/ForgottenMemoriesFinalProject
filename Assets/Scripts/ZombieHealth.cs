@@ -23,7 +23,7 @@ public class ZombieHealth : MonoBehaviour
             healthNumber -= 1;
             rb.AddForce(other.transform.right * knockbackForce, ForceMode.Impulse);
         }
-        else if (other.tag == "PlayerBullet")
+        else if (other.tag == "Bullet")
         {
             healthNumber -= 2;
         }

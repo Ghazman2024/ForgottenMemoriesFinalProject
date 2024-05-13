@@ -11,14 +11,24 @@ public class PlayerGun : MonoBehaviour
     private const int AMMO_INCREMENT_5 = 5;
     private const int AMMO_INCREMENT_10 = 10;
     private const int AMMO_INCREMENT_15 = 15;
+    private float cooldown = 0.5f; //  0.5 seconds cooldown
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // Shooting
+        if (cooldown > 0)
         {
-            ammoRemaining = Math.Max(0, ammoRemaining - 1);
+            cooldown -= Time.deltaTime;
+        }
+        else if (Input.GetKeyDown(KeyCode.F) && ammoRemaining > 0) // Shooting
+        {
+            ammoRemaining--;
             UpdateAmmoText();
-            bullet.SetActive(true);
+
+            // Create a new bullet instance
+            GameObject newBullet = Instantiate(bullet, bullet.transform.position, bullet.transform.rotation);
+            newBullet.SetActive(true); // Set the new bullet to be active
+
+            cooldown = 0.5f;
         }
     }
 
@@ -30,21 +40,12 @@ public class PlayerGun : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other) // Picking Up Ammo
     {
         if (Input.GetKeyDown(KeyCode.E) && IsAmmoPickup(other))
         {
             PickUpAmmo(other);
         }
-    }
-
-    private void PickUpAmmo(Collider other)
-    {
-        int ammoAmount = GetAmmoAmountFromTag(other.tag);
-        ammoRemaining += ammoAmount;
-        Destroy(other.gameObject);
-        pressEtxt.SetActive(false);
-        UpdateAmmoText();
     }
 
     private void OnTriggerExit(Collider other)
@@ -70,6 +71,15 @@ public class PlayerGun : MonoBehaviour
             default:
                 return 0;
         }
+    }
+
+    private void PickUpAmmo(Collider other)
+    {
+        int ammoAmount = GetAmmoAmountFromTag(other.tag);
+        ammoRemaining += ammoAmount;
+        Destroy(other.gameObject);
+        pressEtxt.SetActive(false);
+        UpdateAmmoText();
     }
 
     private void UpdateAmmoText()

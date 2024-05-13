@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private int speed = 1;
+    private int speed = 10;
     void Update()
     {
-        transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * speed);
+        transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

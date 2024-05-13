@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2131600722}
         m_TargetAssemblyTypeName: PausedButton, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2131600722}
         m_TargetAssemblyTypeName: PausedButton, Assembly-CSharp
         m_MethodName: QuitDesktop
         m_Mode: 1
@@ -800,6 +800,7 @@ GameObject:
   - component: {fileID: 180240263}
   - component: {fileID: 180240265}
   - component: {fileID: 180240264}
+  - component: {fileID: 180240266}
   m_Layer: 3
   m_Name: Bullet
   m_TagString: Bullet
@@ -816,11 +817,11 @@ Transform:
   m_GameObject: {fileID: 180240262}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0.3410001, y: 1.7088175, z: 0.5050002}
-  m_LocalScale: {x: 0.022985093, y: 0.022985099, z: 0.022985082}
+  m_LocalPosition: {x: 0.341, y: 1.7088175, z: 0.033}
+  m_LocalScale: {x: 0.022985091, y: 0.022985099, z: 0.022985082}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1585657953}
+  m_Father: {fileID: 322293014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &180240264
 MonoBehaviour:
@@ -886,6 +887,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &180240266
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180240262}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.2400055, y: 7.6800046, z: 0.20000254}
+  m_Center: {x: -0.000005722046, y: 0, z: -0.0000047683716}
 --- !u!1 &241295617
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +942,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1546,7 +1568,7 @@ PrefabInstance:
       addedObject: {fileID: 1303916443}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 60d3b8d527b53374ebd7f0b8fe27b454, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1585657953}
+      addedObject: {fileID: 180240263}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 60d3b8d527b53374ebd7f0b8fe27b454, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1298822946}
@@ -1614,7 +1636,7 @@ MonoBehaviour:
   ammoTxt: {fileID: 1959532987}
   pressEtxt: {fileID: 424232523}
   noAmmoTxt: {fileID: 322475077}
-  bullet: {fileID: 1585657952}
+  bullet: {fileID: 180240262}
 --- !u!114 &322293017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1659,7 +1681,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2858,7 +2880,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3317,7 +3339,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4212,7 +4234,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2131600722}
         m_TargetAssemblyTypeName: PausedButton, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -5223,38 +5245,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1585657952
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1585657953}
-  m_Layer: 3
-  m_Name: Bullets
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1585657953
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585657952}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 180240263}
-  m_Father: {fileID: 322293014}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1740495745
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,6 +5607,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959532987}
   m_CullTransparentMesh: 1
+--- !u!1 &2131600721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131600723}
+  - component: {fileID: 2131600722}
+  m_Layer: 0
+  m_Name: PauseMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131600722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131600721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f11278c11848d48b766bd3cc927826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 518519886}
+--- !u!4 &2131600723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131600721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.18305132, y: 2.5363786, z: -1.2693387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5629,3 +5664,4 @@ SceneRoots:
   - {fileID: 241295621}
   - {fileID: 432121740}
   - {fileID: 1893916966}
+  - {fileID: 2131600723}
