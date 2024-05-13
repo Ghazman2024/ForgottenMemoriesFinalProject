@@ -7,8 +7,7 @@ using UnityEngine;
 public class PlayerGun : MonoBehaviour
 {
     public int ammoRemaining = 20;
-    public GameObject ammoTxt, pressEtxt, noAmoTxt, bullet;
-
+    public GameObject ammoTxt, pressEtxt, noAmmoTxt, bullet;
     private const int AMMO_INCREMENT_5 = 5;
     private const int AMMO_INCREMENT_10 = 10;
     private const int AMMO_INCREMENT_15 = 15;
@@ -55,18 +54,18 @@ public class PlayerGun : MonoBehaviour
 
     private bool IsAmmoPickup(Collider other)
     {
-        return other.tag == "5Amo" || other.tag == "10Amo" || other.tag == "15Amo";
+        return other.tag == "5Ammo" || other.tag == "10Ammo" || other.tag == "15Ammo";
     }
 
     private int GetAmmoAmountFromTag(string tag)
     {
         switch (tag)
         {
-            case "5Amo":
+            case "5Ammo":
                 return AMMO_INCREMENT_5;
-            case "10Amo":
+            case "10Ammo":
                 return AMMO_INCREMENT_10;
-            case "15Amo":
+            case "15Ammo":
                 return AMMO_INCREMENT_15;
             default:
                 return 0;
@@ -78,13 +77,13 @@ public class PlayerGun : MonoBehaviour
         ammoTxt.GetComponent<TMP_Text>().text = ammoRemaining.ToString();
         if (ammoRemaining <= 0)
         {
-            noAmoTxt.SetActive(true);
+            noAmmoTxt.SetActive(true);
             StartCoroutine(NoAmoWarning());
         }
     }
     private IEnumerator NoAmoWarning()
     {
         yield return new WaitForSeconds(3);
-        noAmoTxt.SetActive(false);
+        noAmmoTxt.SetActive(false);
     }
 }

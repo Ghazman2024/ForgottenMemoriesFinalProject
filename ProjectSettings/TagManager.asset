@@ -7,11 +7,11 @@ TagManager:
   - Enemy
   - Ground
   - EnemyAttackBox
-  - 5Amo
-  - 10Amo
-  - 15Amo
   - Bullet
   - PlayerAttack
+  - 5Ammo
+  - 10Ammo
+  - 15Ammo
   layers:
   - Default
   - TransparentFX

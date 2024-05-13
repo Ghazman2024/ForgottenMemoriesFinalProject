@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 172403166}
   m_Layer: 0
   m_Name: 10AmoCollider
-  m_TagString: 10Amo
+  m_TagString: 10Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -776,6 +776,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200995871}
   m_CullTransparentMesh: 1
+--- !u!1 &215431615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215431616}
+  - component: {fileID: 215431617}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &215431616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215431615}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3.6358497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1058262108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &215431617
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215431615}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &254086349
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +975,7 @@ GameObject:
   - component: {fileID: 282705992}
   - component: {fileID: 282705991}
   m_Layer: 0
-  m_Name: AmoCreate10
+  m_Name: AmmoCrate10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1076,7 +1129,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dbe034b0b9b87a44b220012a9da6cf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1436,7 +1489,7 @@ GameObject:
   - component: {fileID: 541264528}
   m_Layer: 0
   m_Name: 5AmoCollider
-  m_TagString: 5Amo
+  m_TagString: 5Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1671,59 +1724,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603246325}
   m_CullTransparentMesh: 1
---- !u!1 &692916150
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 692916152}
-  - component: {fileID: 692916151}
-  m_Layer: 0
-  m_Name: Invisible Wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &692916151
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692916150}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 33.16, y: 7.79, z: 1}
-  m_Center: {x: 0, y: 2.6, z: 0}
---- !u!4 &692916152
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692916150}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24302, y: 1.26, z: -1.15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &704608666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,7 +2021,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dbe034b0b9b87a44b220012a9da6cf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2303,7 +2303,7 @@ GameObject:
   - component: {fileID: 775329393}
   - component: {fileID: 775329392}
   m_Layer: 0
-  m_Name: AmoCreate15
+  m_Name: AmmoCrate15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2803,7 +2803,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.2760015, y: 1.888693, z: -0.08600004}
+  m_LocalPosition: {x: 4.24, y: 1.85, z: -0}
   m_LocalScale: {x: 0.59958476, y: 0.59958506, z: 0.59958476}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2943,6 +2943,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964379826}
   m_CullTransparentMesh: 1
+--- !u!1 &1058262106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058262108}
+  - component: {fileID: 1058262107}
+  m_Layer: 0
+  m_Name: Invisible Walls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1058262107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058262106}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1058262108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058262106}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5064014, y: 0, z: 1.8179247}
+  m_LocalScale: {x: 56.034, y: 23.108, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 215431616}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152366783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,7 +3388,7 @@ GameObject:
   - component: {fileID: 1213430156}
   m_Layer: 0
   m_Name: 15AmoCollider
-  m_TagString: 15Amo
+  m_TagString: 15Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3435,7 +3489,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dbe034b0b9b87a44b220012a9da6cf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3474,8 +3528,8 @@ Transform:
   m_GameObject: {fileID: 1232656680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.53, z: -2.69}
-  m_LocalScale: {x: 34.231, y: 1, z: 19.4798}
+  m_LocalPosition: {x: 0, y: -2.11, z: -2.69}
+  m_LocalScale: {x: 34.231, y: 3.0336, z: 7.5801744}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 369529200}
@@ -4032,7 +4086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60d3b8d527b53374ebd7f0b8fe27b454, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60d3b8d527b53374ebd7f0b8fe27b454, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4455,59 +4509,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1761201520}
   m_SourcePrefab: {fileID: 100100000, guid: 60d3b8d527b53374ebd7f0b8fe27b454, type: 3}
---- !u!1 &1406904305
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1406904307}
-  - component: {fileID: 1406904306}
-  m_Layer: 0
-  m_Name: Invisible Wall (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &1406904306
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406904305}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 33.16, y: 7.79, z: 1}
-  m_Center: {x: 0, y: 2.6, z: 0}
---- !u!4 &1406904307
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406904305}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24302, y: 1.05, z: -4.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502223927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5593,7 +5594,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.81, z: 1.1224878}
+  m_Size: {x: 1.5, y: 2.81, z: 1.1224878}
   m_Center: {x: 0, y: 1.37, z: 0}
 --- !u!54 &1761201514
 Rigidbody:
@@ -5656,7 +5657,7 @@ MonoBehaviour:
   ammoRemaining: 20
   ammoTxt: {fileID: 964379826}
   pressEtxt: {fileID: 814960555}
-  noAmoTxt: {fileID: 1564387398}
+  noAmmoTxt: {fileID: 0}
   bullet: {fileID: 81868103}
 --- !u!114 &1761201518
 MonoBehaviour:
@@ -6078,7 +6079,7 @@ GameObject:
   - component: {fileID: 2118532850}
   - component: {fileID: 2118532849}
   m_Layer: 0
-  m_Name: AmoCreate5
+  m_Name: AmmoCrate5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6194,7 +6195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.11
+      value: 19.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6202,11 +6203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7241117
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6214,7 +6215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.68968266
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6226,7 +6227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -87.21
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4679a5aa637f552408fe678fc9388f2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -6291,10 +6292,9 @@ SceneRoots:
   - {fileID: 1232656684}
   - {fileID: 752214764}
   - {fileID: 550263363}
-  - {fileID: 692916152}
-  - {fileID: 1406904307}
   - {fileID: 2118532852}
   - {fileID: 282705994}
   - {fileID: 775329395}
   - {fileID: 1681894042}
   - {fileID: 76700051}
+  - {fileID: 1058262108}
