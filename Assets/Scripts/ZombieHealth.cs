@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ZombieHealth : MonoBehaviour
 {
-    public int healthNumber = 5;
+    public int healthNumber = 10;
     public GameObject healthText;
     public float knockbackForce = 5f;
 
@@ -14,6 +14,7 @@ public class ZombieHealth : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        healthNumber = 10;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,9 +30,14 @@ public class ZombieHealth : MonoBehaviour
         }
         if (healthNumber == 0)
         {
-            Destroy(this.gameObject);
+            Invoke("DestroyEnemy", 0.1f);
             // GetComponent<Animator>().SetBool("Die", true);
         }
         healthText.GetComponent<TMP_Text>().text = healthNumber.ToString();
+    }
+
+    private void DestroyEnemy()
+    {
+        Destroy(this.gameObject);
     }
 }

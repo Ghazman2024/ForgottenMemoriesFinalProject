@@ -17,6 +17,10 @@ public class Buttons : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void TestingLevel()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void QuitDesktop()
     {
         Application.Quit();

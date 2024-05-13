@@ -14,7 +14,18 @@ public class PausedButton : MonoBehaviour
         {
             isPaused = !isPaused;
             pauseMenu.SetActive(isPaused);
-            Time.timeScale = isPaused ? 0 : 1;
+
+            // Pause the game
+            if (isPaused)
+            {
+                Time.timeScale = 0;
+                Input.multiTouchEnabled = false;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Input.multiTouchEnabled = true;
+            }
         }
     }
 

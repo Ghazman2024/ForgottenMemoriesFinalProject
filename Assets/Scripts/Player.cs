@@ -63,13 +63,16 @@ public class Player : MonoBehaviour
             GetComponent<Animator>().SetBool("Crouch", true);
             GetComponent<Animator>().SetBool("Idle", false);
             moveSpeed = 5;
-            boxCollider.center = new Vector3(boxCollider.center.x, -0.5f, boxCollider.center.z);
+            boxCollider.center = new Vector3(boxCollider.center.x, 0.91f, boxCollider.center.z);
+            boxCollider.size = new Vector3(1.5f, -0.5f, 1.22488f);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             GetComponent<Animator>().SetBool("Crouch", false);
             GetComponent<Animator>().SetBool("Idle", true);
             boxCollider.center = new Vector3(boxCollider.center.x, 1.37f, boxCollider.center.z);
+            boxCollider.size = new Vector3(1.5f, 2.81f, 1.22488f);
+
         }
         if (!Input.anyKey) // Doing Nothing
         {
